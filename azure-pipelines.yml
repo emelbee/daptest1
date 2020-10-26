@@ -22,7 +22,7 @@ steps:
   inputs:
     conjurapplianceurl: 'https://dapmaster.cybr.com'
     conjuraccount: 'cyberark'
-    conjurusername: 'client/node1'
+    conjurusername: 'pipeline-consumers/agent01'
     conjurapikey: $(conjurkey)
     ignoreSsl: true
     secretsyml: secrets.yml
