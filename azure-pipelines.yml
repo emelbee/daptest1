@@ -23,7 +23,7 @@ steps:
     conjurapplianceurl: 'https://dapmaster.cybr.com'
     conjuraccount: 'cyberark'
     conjurusername: 'client/node1'
-    conjurapikey: '1a4d9wakaaamd22ydzftg9e048c9e8pn1tfmdev2h5epcx1mpmnk3'
+    conjurapikey: $(conjurkey)
     ignoreSsl: true
     secretsyml: secrets.yml
 
