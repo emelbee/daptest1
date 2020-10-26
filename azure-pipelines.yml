@@ -26,4 +26,5 @@ steps:
     conjurapikey: '1a4d9wakaaamd22ydzftg9e048c9e8pn1tfmdev2h5epcx1mpmnk3'
     ignoreSsl: yes
     secretsyml: secrets.yml
-    
+
+- script: echo $(SqlServerName)    
