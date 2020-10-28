@@ -27,4 +27,4 @@ steps:
     ignoreSsl: true
     secretsyml: secrets.yml
 
-- script: echo $(SqlServerName) > C:\temp\name.txt   
+- script: echo $(SqlServerName) $(SqlToken)
