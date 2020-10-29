@@ -32,7 +32,7 @@ steps:
 
 - powershell: .\helloworld.ps1
 
--# Azure PowerShell
+- Azure PowerShell
 # Run a PowerShell script within an Azure environment
 - task: AzurePowerShell@4
   inputs:
