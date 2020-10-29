@@ -43,5 +43,5 @@ steps:
     #scriptArguments: # Optional
     #errorActionPreference: 'stop' # Optional. Options: stop, continue, silentlyContinue
     #failOnStandardError: false # Optional
-    azurePowerShellVersion: '1.0.0' # Required. Options: latestVersion, otherVersion
+    azurePowerShellVersion: LatestVersion # Required. Options: latestVersion, otherVersion
     #preferredAzurePowerShellVersion: # Required when azurePowerShellVersion == OtherVersion
