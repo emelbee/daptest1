@@ -1,6 +1,17 @@
 # Define the FQDN for the REST APIs
 $FQDN = 'https://components.cyberarkdemo.com'
 
+# get the api logon credentials
+
+  # We got the creds for the REST APIs so we are good to go!
+  "$(Get-Date) Credentials retrieved, logging in to REST APIs"
+  $username = $CAOutput.Split(",")[0]
+  $password = $CAOutput.Split(",")[1]
+  $logonInfo = @{}
+  $logonInfo.username = $username
+  $logonInfo.password = $password
+
+
 
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
@@ -15,8 +26,8 @@ $FQDN = 'https://components.cyberarkdemo.com'
   # Account parameters
   $newAccounts = @{}
   $newAccount = @{}
-  $newAccount.safe = "AWS"
-  $newAccount.platformID = "AWSWindowsServers"
+  $newAccount.safe = "Azure"
+  $newAccount.platformID = "AzureWindowsServers"
   # We could use the IP or DNS address, IP is neater...
   $newAccount.address = $publicIP
   #$newAccount.address = $publicDNS
