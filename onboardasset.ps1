@@ -8,9 +8,12 @@ $FQDN = 'https://components.cyberarkdemo.com'
   $username = $CAOutput.Split(",")[0]
   $password = $CAOutput.Split(",")[1]
   $logonInfo = @{}
-  $logonInfo.username = $username
-  $logonInfo.password = $password
-
+  
+  #$logonInfo.username = $username
+  #$logonInfo.password = $password
+  $logonInfo.username = $(env:vault-username)
+  $logonInfo.password = $(env:vault-password)
+${env:VARIABLE-NAME}
 
 
 ##########################################################
