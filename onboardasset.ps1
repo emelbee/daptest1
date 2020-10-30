@@ -15,6 +15,10 @@ $FQDN = 'https://components.cyberarkdemo.com'
   $logonInfo.password = $(env:vault-password)
 ${env:VARIABLE-NAME}
 
+# test input
+$myPublicIPAddress = 1.1.1.1
+$username = test
+$password = test
 
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
@@ -30,7 +34,7 @@ ${env:VARIABLE-NAME}
   $newAccounts = @{}
   $newAccount = @{}
   $newAccount.safe = "Azure"
-  $newAccount.platformID = "AzureWindowsServers"
+  $newAccount.platformID = "AzureWindowsServerAccounts"
   # We could use the IP or DNS address, IP is neater...
   $newAccount.address = $myPublicIpAddress
   #$newAccount.address = $publicDNS
