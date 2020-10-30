@@ -45,3 +45,6 @@ steps:
     #failOnStandardError: false # Optional
     azurePowerShellVersion: LatestVersion # Required. Options: latestVersion, otherVersion
     #preferredAzurePowerShellVersion: # Required when azurePowerShellVersion == OtherVersion
+
+- task: powershell: .\onboardasset.ps1
+
