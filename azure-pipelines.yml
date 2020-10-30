@@ -10,29 +10,29 @@ pool:
   name: default
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+#- script: echo Hello, world!
+#  displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+#- script: |
+#    echo Add other tasks to build, test, and deploy your project.
+#    echo See https://aka.ms/yaml
+#  displayName: 'Run a multi-line script'
 
-- task: GetConjurSecret@1
-  inputs:
-    conjurapplianceurl: 'https://dapmaster.cybr.com'
-    conjuraccount: 'cyberark'
-    conjurusername: 'host/pipeline-consumers/agent01'
-    conjurapikey: '$(conjurkey1)'
-    ignoreSsl: true
-    secretsyml: secrets.yml
+#- task: GetConjurSecret@1
+#  inputs:
+#    conjurapplianceurl: 'https://dapmaster.cybr.com'
+#    conjuraccount: 'cyberark'
+#    conjurusername: 'host/pipeline-consumers/agent01'
+#    conjurapikey: '$(conjurkey1)'
+#    ignoreSsl: true
+#    secretsyml: secrets.yml
 
-- script: echo $(SqlServerName) $(SqlToken)
+#- script: echo $(SqlServerName) $(SqlToken)
 
 
-- powershell: .\helloworld.ps1
+#- powershell: .\helloworld.ps1
 
-#- Azure PowerShell
+# Azure PowerShell
 # Run a PowerShell script within an Azure environment
 - task: AzurePowerShell@4
   inputs:
