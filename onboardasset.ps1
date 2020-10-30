@@ -14,10 +14,10 @@ $logonInfo = @{}
   $logonInfo.password = $(env:vault-password)
 
 # test input
-$myPublicIPAddress = 1.1.1.1
+$myPublicIpAddress = 1.1.1.1
 $username = "test"
 $password = "test"
-
+ "$(Get-Date) test input done "
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
   ##########################################################
