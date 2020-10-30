@@ -53,8 +53,8 @@ $password = "test"
   # Use REST APIs to logoff from the Vault
   ##########################################################
   $logoffURI = $FQDN + '/PasswordVault/WebServices/auth/cyberark/CyberArkAuthenticationService.svc/logoff'
- # $result = Invoke-RestMethod -Method Post -Uri $logoffURI -headers $headers -ContentType "application/json" -Body (ConvertTo-Json($logonInfo))
- # "$(Get-Date) Vault logoff successful"
+  $result = Invoke-RestMethod -Method Post -Uri $logoffURI -headers $headers -ContentType "application/json" -Body (ConvertTo-Json($logonInfo))
+  "$(Get-Date) Vault logoff successful"
  # "$(Get-Date) Finished provisioning instance in AWS and the privileged account of instance $instanceid, with IP address $publicIP in the CyberArk Vault"
  # pause
   # Clear AWS credentials so no PowerShell script in the same context can access them
