@@ -1,6 +1,7 @@
 New-AzResourceGroup `
    -ResourceGroupName "myResourceGroupVM" `
    -Location "East US"
+   -Force
    
   
   $username = "newuser"
@@ -16,3 +17,4 @@ New-AzResourceGroup `
    -SecurityGroupName "myNetworkSecurityGroup" `
    -PublicIpAddressName "myPublicIpAddress" `
    -Credential $Cred
+   -Force
