@@ -1,5 +1,5 @@
 New-AzResourceGroup `
-   -ResourceGroupName "myResourceGroupVM1" `
+   -ResourceGroupName "myResourceGroupVM" `
    -Location "East US"
  
    
