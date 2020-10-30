@@ -32,11 +32,11 @@ ${env:VARIABLE-NAME}
   $newAccount.safe = "Azure"
   $newAccount.platformID = "AzureWindowsServers"
   # We could use the IP or DNS address, IP is neater...
-  $newAccount.address = $publicIP
+  $newAccount.address = $myPublicIpAddress
   #$newAccount.address = $publicDNS
   # The default Windows account is always Administrator...
-  $newAccount.username = "Administrator"
-  $newAccount.password = $ec2_password
+  $newAccount.username = $username
+  $newAccount.password = $password
   $newAccount.accountName = $instanceid
   # Add the account to create to the accounts array
   $newAccounts.account = $newAccount
@@ -50,13 +50,13 @@ ${env:VARIABLE-NAME}
   ##########################################################
   # Use REST APIs to logoff from the Vault
   ##########################################################
-  $logoffURI = $FQDN + '/PasswordVault/WebServices/auth/cyberark/CyberArkAuthenticationService.svc/logoff'
-  $result = Invoke-RestMethod -Method Post -Uri $logoffURI -headers $headers -ContentType "application/json" -Body (ConvertTo-Json($logonInfo))
-  "$(Get-Date) Vault logoff successful"
-  "$(Get-Date) Finished provisioning instance in AWS and the privileged account of instance $instanceid, with IP address $publicIP in the CyberArk Vault"
-  pause
+ # $logoffURI = $FQDN + '/PasswordVault/WebServices/auth/cyberark/CyberArkAuthenticationService.svc/logoff'
+ # $result = Invoke-RestMethod -Method Post -Uri $logoffURI -headers $headers -ContentType "application/json" -Body (ConvertTo-Json($logonInfo))
+ # "$(Get-Date) Vault logoff successful"
+ # "$(Get-Date) Finished provisioning instance in AWS and the privileged account of instance $instanceid, with IP address $publicIP in the CyberArk Vault"
+ # pause
   # Clear AWS credentials so no PowerShell script in the same context can access them
-  Remove-AWSCredentialProfile -ProfileName default -Force
+ # Remove-AWSCredentialProfile -ProfileName default -Force
   # This will delete the only way you can decrypt the password using AWS provided capabilities
-  Remove-Item "$KeyFilePath"
-}
+ # Remove-Item "$KeyFilePath"
+#}
