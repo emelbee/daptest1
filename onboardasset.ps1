@@ -10,8 +10,8 @@ $logonInfo = @{}
 
   #$logonInfo.username = $username
   #$logonInfo.password = $password
-  $logonInfo.username = $(vault-username)
-  $logonInfo.password = $(vault-password)
+  $logonInfo.username = $(env:vault-username)
+  $logonInfo.password = $(env:vault-password)
 
 # test input
 $myPublicIpAddress = "1.1.1.1"
