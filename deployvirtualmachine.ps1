@@ -1,6 +1,6 @@
 New-AzResourceGroup 
    -ResourceGroupName "myResourceGroupVM" 
-   -Location "EastUS"
+   -Location "East US"
    
   #$password = ConvertTo-SecureString “TestTestTest12345!” -AsPlainText -Force
   #$Cred = New-Object System.Management.Automation.PSCredential -ArgumentList (“forceduser” , $password)
@@ -13,7 +13,7 @@ New-AzResourceGroup
  New-AzVm 
    -ResourceGroupName "myResourceGroupVM" 
    -Name "myVM" 
-   -Location "EastUS" 
+   -Location "East US" 
    -VirtualNetworkName "myVnet" 
    -SubnetName "mySubnet" 
    -SecurityGroupName "myNetworkSecurityGroup" 
