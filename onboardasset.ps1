@@ -5,10 +5,9 @@ $FQDN = 'https://components.cybr.com'
 
   # We got the creds for the REST APIs so we are good to go!
   "$(Get-Date) Credentials retrieved, logging in to REST APIs"
-  $username = $CAOutput.Split(",")[0]
-  $password = $CAOutput.Split(",")[1]
-  $logonInfo = @{}
-  
+
+$logonInfo = @{}
+
   #$logonInfo.username = $username
   #$logonInfo.password = $password
   $logonInfo.username = $(env:vault-username)
