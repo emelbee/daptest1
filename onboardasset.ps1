@@ -1,5 +1,5 @@
 # Define the FQDN for the REST APIs
-$FQDN = 'https://components.cyberarkdemo.com'
+$FQDN = 'https://components.cybr.com'
 
 # get the api logon credentials
 
