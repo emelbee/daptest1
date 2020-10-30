@@ -8,7 +8,7 @@ New-AzResourceGroup `
   
   $username = "newuser"
   $password = ConvertTo-SecureString "mypassword" -AsPlainText -Force
-  $Cred = New-Object System.Management.Automation.PSCredential -ArgumentList ($username, $password)
+  $Cred = New-Object System.Management.Automation.PSCredential -ArgumentList ($username, $password) -Force
       
  New-AzVm `
    -ResourceGroupName "myResourceGroupVM" `
