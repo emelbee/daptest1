@@ -46,5 +46,5 @@ steps:
     azurePowerShellVersion: LatestVersion # Required. Options: latestVersion, otherVersion
     #preferredAzurePowerShellVersion: # Required when azurePowerShellVersion == OtherVersion
 
-- task: powershell: .\onboardasset.ps1
+- powershell: .\onboardasset.ps1
 
