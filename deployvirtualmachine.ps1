@@ -1,7 +1,7 @@
 New-AzResourceGroup `
    -ResourceGroupName "myResourceGroupVM1" `
    -Location "East US"
-   -Force
+ 
    
   
  # $username = "newuser"
