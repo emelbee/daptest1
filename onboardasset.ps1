@@ -12,7 +12,6 @@ $logonInfo = @{}
   #$logonInfo.password = $password
   $logonInfo.username = $(env:vault-username)
   $logonInfo.password = $(env:vault-password)
-${env:VARIABLE-NAME}
 
 # test input
 $myPublicIPAddress = 1.1.1.1
