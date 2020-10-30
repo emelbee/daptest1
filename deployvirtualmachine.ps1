@@ -28,6 +28,6 @@ New-AzVm `
     -SubnetName "mySubnet" `
     -SecurityGroupName "myNetworkSecurityGroup" `
     -PublicIpAddressName "myPublicIpAddress" `
-    -OpenPorts 80,3389
-    -Credential $Cred
+    -OpenPorts 80,3389 `
+    -Credential $Cred `
     -Force
