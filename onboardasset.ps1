@@ -15,8 +15,8 @@ $logonInfo = @{}
 
 # test input
 $myPublicIPAddress = 1.1.1.1
-$username = test
-$password = test
+$username = "test"
+$password = "test"
 
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
