@@ -13,6 +13,7 @@ pool:
 variables:
   username: breakglass
   password: P@ssW0rD!
+  address: "1.1.1.1"
 
 steps:
 #- script: echo Hello, world!
@@ -38,7 +39,7 @@ steps:
 
 #- powershell: .\helloworld.ps1
 
-# Azure PowerShell
+# Azure PowerShell to create assset
 # Run a PowerShell script within an Azure environment
 - task: AzurePowerShell@4
   inputs:
@@ -52,7 +53,10 @@ steps:
     azurePowerShellVersion: LatestVersion # Required. Options: latestVersion, otherVersion
     #preferredAzurePowerShellVersion: # Required when azurePowerShellVersion == OtherVersion
     targetpassword: $(password)
+    targetaddress: $(address)
 
+# run powershell to onboard 
 - powershell: .\onboardasset.ps1
   inputs:
     targetpassword: $(password)
+    targetaddress: $(address)
