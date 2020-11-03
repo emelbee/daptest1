@@ -22,4 +22,4 @@ New-AzVm `
     -Credential $Cred 
 
 #Write-Host myPublicIPAddress = $myPublicIPAddress
-echo ##vso[task.setvariable variable=myPublicIPAddress]$myPublicIPAddress
+echo ##vso[task.setvariable variable=mypublicipaddress]$myPublicIPAddress
