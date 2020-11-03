@@ -16,7 +16,7 @@ $logonInfo = @{}
   $logonInfo.password = "Cyberark1"
 
 # test input
-$targetaddress = $myPublicIPAddress
+$targetaddress = dependencies.outputs['assetcreation.mypublicipaddress']
 #$username = "test"
 $targetpassword = "P@ssW0rD!"
  "$(Get-Date) test input done "
