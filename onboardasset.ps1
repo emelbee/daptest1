@@ -23,8 +23,8 @@ $logonInfo = @{}
 
   #$logonInfo.username = $username
   #$logonInfo.password = $password
-  $logonInfo.username = $(env:vault-username)
-  $logonInfo.password = $(env:vault-password)
+  $logonInfo.username = dapprovisioning
+  $logonInfo.password = Cyberark1
 
 # test input
 #$myPublicIpAddress = "1.1.1.1"
