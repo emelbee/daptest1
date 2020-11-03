@@ -57,7 +57,9 @@ steps:
    
 
 # run powershell to onboard 
-- powershell: .\onboardasset.ps1
+#- powershell: .\onboardasset.ps1
+  
+- task: PowerShell@2
   inputs:
-    targetpassword: $(password)
-    targetaddress: $(assetcreation.myPublicIpAddress)
+    filePath: '.\onboardasset.ps1'
+    arguments: '$(assetcreation.myPublicIpAddress)' 
