@@ -18,7 +18,7 @@ $logonInfo = @{}
 # test input
 #$targetaddress = "1.1.1.1"
 #$username = "test"
-#$targetpassword = "P@ssW0rD!"
+$targetpassword = "P@ssW0rD!"
  "$(Get-Date) test input done "
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
