@@ -56,14 +56,6 @@ steps:
     targetpassword: $(password)
    
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      
-      echo $(myPublicIpAddress)
-
 
 # run powershell to onboard 
 #- powershell: .\onboardasset.ps1
@@ -72,4 +64,4 @@ steps:
   inputs:
     filePath: '.\onboardasset.ps1'
     #arguments: '$(assetcreation.myPublicIpAddress)' 
-    arguments: $(myPublicIpAddress)
+    arguments: $(assetcreation.myPublicIPAddress)
