@@ -62,4 +62,5 @@ steps:
 - task: PowerShell@2
   inputs:
     filePath: '.\onboardasset.ps1'
-    arguments: '$(assetcreation.myPublicIpAddress)' 
+    #arguments: '$(assetcreation.myPublicIpAddress)' 
+    arguments: $(myPublicIpAddress)
