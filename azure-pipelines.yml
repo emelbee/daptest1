@@ -56,7 +56,6 @@ steps:
     targetpassword: $(password)
    
 
-- 
 - task: Bash@3
   inputs:
     targetType: 'inline'
