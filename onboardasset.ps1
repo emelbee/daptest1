@@ -16,7 +16,7 @@ $logonInfo = @{}
   $logonInfo.password = "Cyberark1"
 
 # test input
-#$targetaddress = "1.1.1.1"
+$targetaddress = $myPublicIPAddress
 #$username = "test"
 $targetpassword = "P@ssW0rD!"
  "$(Get-Date) test input done "
