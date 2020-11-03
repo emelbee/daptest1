@@ -9,6 +9,11 @@ trigger:
 pool:
   name: default
 
+# set variables
+variables:
+  username: breakglass
+  password: P@ssW0rD!
+
 steps:
 #- script: echo Hello, world!
 #  displayName: 'Run a one-line script'
@@ -26,6 +31,7 @@ steps:
 #    conjurapikey: '$(conjurkey1)'
 #    ignoreSsl: true
 #    secretsyml: secrets.yml
+     
 
 #- script: echo $(SqlServerName) $(SqlToken)
 
@@ -45,6 +51,8 @@ steps:
     #failOnStandardError: false # Optional
     azurePowerShellVersion: LatestVersion # Required. Options: latestVersion, otherVersion
     #preferredAzurePowerShellVersion: # Required when azurePowerShellVersion == OtherVersion
+    targetpassword: $(password)
 
 - powershell: .\onboardasset.ps1
-
+  inputs:
+    targetpassword: $(password)
