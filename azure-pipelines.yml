@@ -43,6 +43,7 @@ steps:
 # Run a PowerShell script within an Azure environment
 - task: AzurePowerShell@4
   inputs:
+    name: assetcreation
     azureSubscription: azuresubscription
     scriptType: 'FilePath' # Optional. Options: filePath, inlineScript
     scriptPath: $(Build.SourcesDirectory)\deployvirtualmachine.ps1
@@ -59,4 +60,4 @@ steps:
 - powershell: .\onboardasset.ps1
   inputs:
     targetpassword: $(password)
-    targetaddress: $(address)
+    targetaddress: $(assetcreation.myPublicIpAddress)
