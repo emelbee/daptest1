@@ -4,7 +4,7 @@ New-AzResourceGroup `
  
    
   
-  $username = "newuser"
+  $username = "breakglass"
   $password = ConvertTo-SecureString "P@ssW0rD!" -AsPlainText -Force
   $Cred = New-Object System.Management.Automation.PSCredential($username, $password)
   
