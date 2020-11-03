@@ -5,6 +5,19 @@ $FQDN = 'https://comp01.cybr.com'
 
   # We got the creds for the REST APIs so we are good to go!
   "$(Get-Date) Credentials retrieved, logging in to REST APIs"
+  
+  
+ 
+  #-ResourceGroupName "myResourceGroupVM" `
+   #-Name "myVM" `
+   #-Location "East US" `
+   #-VirtualNetworkName "myVnet" `
+   #-SubnetName "mySubnet" `
+   #-SecurityGroupName "myNetworkSecurityGroup" `
+   #-PublicIpAddressName "myPublicIpAddress" `
+   #-Credential $Cred
+   #-Force
+  
 
 $logonInfo = @{}
 
@@ -14,9 +27,9 @@ $logonInfo = @{}
   $logonInfo.password = $(env:vault-password)
 
 # test input
-$myPublicIpAddress = "1.1.1.1"
-$username = "test"
-$password = "test"
+#$myPublicIpAddress = "1.1.1.1"
+#$username = "test"
+#$password = "test"
  "$(Get-Date) test input done "
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
