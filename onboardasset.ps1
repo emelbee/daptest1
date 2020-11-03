@@ -29,7 +29,7 @@ $logonInfo = @{}
 # test input
 #$myPublicIpAddress = "1.1.1.1"
 #$username = "test"
-#$password = "test"
+$targetpassword = ConvertFrom-SecureString $password
  "$(Get-Date) test input done "
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
@@ -51,7 +51,7 @@ $logonInfo = @{}
   #$newAccount.address = $publicDNS
   # The default Windows account is always Administrator...
   $newAccount.username = $username
-  $newAccount.password = $password
+  $newAccount.password = $targetpassword
   $newAccount.accountName = $instanceid
   # Add the account to create to the accounts array
   $newAccounts.account = $newAccount
