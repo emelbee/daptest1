@@ -16,9 +16,9 @@ $logonInfo = @{}
   $logonInfo.password = "Cyberark1"
 
 # test input
-#$myPublicIpAddress = "1.1.1.1"
+#$targetaddress = "1.1.1.1"
 #$username = "test"
-$targetpassword = "P@ssW0rD!"
+#$targetpassword = "P@ssW0rD!"
  "$(Get-Date) test input done "
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
@@ -36,7 +36,7 @@ $targetpassword = "P@ssW0rD!"
   $newAccount.safe = "Azure"
   $newAccount.platformID = "AzureWindowsServerAccounts"
   # We could use the IP or DNS address, IP is neater...
-  $newAccount.address = $myPublicIpAddress
+  $newAccount.address = $targetaddress
   #$newAccount.address = $publicDNS
   # The default Windows account is always Administrator...
   $newAccount.username = $username
