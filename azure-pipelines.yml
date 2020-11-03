@@ -64,4 +64,4 @@ steps:
   inputs:
     filePath: '.\onboardasset.ps1'
     #arguments: '$(assetcreation.myPublicIpAddress)' 
-    arguments: $(dependencies.outputs['assetcreation.myPublicIPAddress'])
+    #arguments: $(dependencies.outputs['assetcreation.mypublicipaddress'])
