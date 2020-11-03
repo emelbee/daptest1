@@ -21,4 +21,4 @@ New-AzVm `
     -OpenPorts 80,3389,139,445 `
     -Credential $Cred 
 
-$targetaddress: $myPublicIPAddress
+write-host $myPublicIPAddress
