@@ -21,4 +21,5 @@ New-AzVm `
     -OpenPorts 80,3389,139,445 `
     -Credential $Cred 
 
-write-host $myPublicIPAddress
+#Write-Host myPublicIPAddress = $myPublicIPAddress
+echo "##vso[task.setvariable variable=myPublicIPAddress]$myPublicIPAddress"
