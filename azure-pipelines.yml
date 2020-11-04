@@ -46,22 +46,15 @@ steps:
     name: assetcreation
     azureSubscription: azuresubscription
     scriptType: 'FilePath' # Optional. Options: filePath, inlineScript
-    scriptPath: $(Build.SourcesDirectory)\deployvirtualmachine.ps1
+    scriptPath: $(Build.SourcesDirectory)\deployandonboard.ps1
     #inline: '# You can write your Azure PowerShell scripts inline here. # You can also pass predefined and custom variables to this script using arguments' # Optional
     #scriptArguments: # Optional
     #errorActionPreference: 'stop' # Optional. Options: stop, continue, silentlyContinue
     #failOnStandardError: false # Optional
     azurePowerShellVersion: LatestVersion # Required. Options: latestVersion, otherVersion
     #preferredAzurePowerShellVersion: # Required when azurePowerShellVersion == OtherVersion
-    targetpassword: $(password)
+   
    
 
 
-# run powershell to onboard 
-#- powershell: .\onboardasset.ps1
-  
-- task: PowerShell@2
-  inputs:
-    filePath: '.\onboardasset.ps1'
-    #arguments: '$(assetcreation.myPublicIpAddress)' 
-    #arguments: $(dependencies.outputs['assetcreation.mypublicipaddress'])
+
