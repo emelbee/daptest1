@@ -9,12 +9,6 @@ trigger:
 pool:
   name: default
 
-# set variables
-variables:
-  username: breakglass
-  password: P@ssW0rD!
-
-
 steps:
 #- script: echo Hello, world!
 #  displayName: 'Run a one-line script'
