@@ -24,6 +24,8 @@ New-AzVm `
 
 "$(Get-Date) azure resource created succesfully"
 
+"$(Get-azurevm -Name myVM)"
+
 ########################################
 # now onboard this virtual machine     #
 ########################################
