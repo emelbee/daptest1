@@ -32,7 +32,7 @@ $FQDN = 'https://comp01.cybr.com'
 
 # get the api logon credentials
 # here we will use the dap integration
-
+# to retrieve the api credentials
 
 # We got the creds for the REST APIs so we are good to go!
  "$(Get-Date) Credentials retrieved, logging in to REST APIs"
@@ -46,10 +46,9 @@ $logonInfo = @{}
   $logonInfo.username = "dapprovisioning"
   $logonInfo.password = "Cyberark1"
 
-# test input
-$targetaddress = dependencies.outputs['assetcreation.mypublicipaddress']
 
 $targetpassword = "P@ssW0rD!"
+$targetaddress = $myPublicIpAddress
  "$(Get-Date) test input done "
 
 ##########################################################
@@ -59,6 +58,7 @@ $targetpassword = "P@ssW0rD!"
   #login to the Vault
   $result = Invoke-RestMethod -Method Post -Uri $loginURI -ContentType "application/json" -Body (ConvertTo-Json($logonInfo))
   "$(Get-Date) Vault login successful"
+  
   $logonToken = $result.CyberArkLogonResult
   # Define the Account Management URL
   $createAccountURI = $FQDN + '/PasswordVault/WebServices/PIMServices.svc/Account'
