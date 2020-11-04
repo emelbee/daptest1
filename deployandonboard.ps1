@@ -68,7 +68,7 @@ $targetpassword = "P@ssW0rD!"
   $newAccount.safe = "Azure"
   $newAccount.platformID = "AzureWindowsServerAccounts"
   # We could use the IP or DNS address, IP is neater...
-  $newAccount.address = $myPublicIpAddress
+  $newAccount.address = "$myPublicIpAddress"
   #$newAccount.address = $publicDNS
   # The default Windows account is always Administrator...
   $newAccount.username = $username
