@@ -51,6 +51,8 @@ $logonInfo = @{}
 $targetpassword = "P@ssW0rD!"
 #$targetaddress = $myPublicIpAddress
  "$(Get-Date) test input done "
+ "$(Get-Date) the input used is $username $targetpassword $publicDNS"
+ 
 
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
