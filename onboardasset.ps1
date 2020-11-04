@@ -16,9 +16,10 @@ $logonInfo = @{}
   $logonInfo.password = "Cyberark1"
 
 # test input
-$targetaddress = dependencies.outputs['assetcreation.mypublicipaddress']
-#$username = "test"
+$targetaddress = "1.1.1.1"
+$username = "test"
 $targetpassword = "P@ssW0rD!"
+
  "$(Get-Date) test input done "
 ##########################################################
   # Use REST APIs to logon to the CyberArk Vault
