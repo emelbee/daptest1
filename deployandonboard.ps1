@@ -24,7 +24,7 @@ New-AzVm `
 
 "$(Get-Date) azure resource created succesfully"
 
-"$(Get-azurevm -Name myVM)"
+"$(Get-AzPublicIpAddress -Name myPublicIpAddress -ResourceGroupName myResourceGroupVM)"
 
 ########################################
 # now onboard this virtual machine     #
