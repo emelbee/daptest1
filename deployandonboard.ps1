@@ -19,7 +19,7 @@ New-AzVm `
     -SubnetName "mySubnet" `
     -SecurityGroupName "myNetworkSecurityGroup" `
     -PublicIpAddressName "myPublicIpAddress" `
-    -FullyQualifiedDomainName "publicDNS"`
+    -FullyQualifiedDomainName "publicDNS" `
     -OpenPorts 80,3389,139,445 `
     -Credential $Cred 
 
