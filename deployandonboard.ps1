@@ -48,7 +48,7 @@ $logonInfo = @{}
 
 
 $targetpassword = "P@ssW0rD!"
-$targetaddress = $myPublicIpAddress
+#$targetaddress = $myPublicIpAddress
  "$(Get-Date) test input done "
 
 ##########################################################
@@ -68,7 +68,7 @@ $targetaddress = $myPublicIpAddress
   $newAccount.safe = "Azure"
   $newAccount.platformID = "AzureWindowsServerAccounts"
   # We could use the IP or DNS address, IP is neater...
-  $newAccount.address = $targetaddress
+  $newAccount.address = $myPublicIpAddress
   #$newAccount.address = $publicDNS
   # The default Windows account is always Administrator...
   $newAccount.username = $username
