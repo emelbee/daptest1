@@ -25,6 +25,8 @@ New-AzVm `
 "$(Get-Date) azure resource created succesfully"
 
 "$(Get-AzPublicIpAddress -Name myPublicIpAddress -ResourceGroupName myResourceGroupVM)"
+(Get-AzPublicIpAddress -ResourceGroupName myResourceGroupVM).IpAddress
+
 
 ########################################
 # now onboard this virtual machine     #
@@ -50,9 +52,10 @@ $logonInfo = @{}
 
 
 $targetpassword = "P@ssW0rD!"
-#$targetaddress = $myPublicIpAddress
+$targetaddress = (Get-AzPublicIpAddress -ResourceGroupName myResourceGroupVM).IpAddress
+
  "$(Get-Date) test input done "
- "$(Get-Date) the input used is $username $targetpassword $myPublicIpAddress"
+ "$(Get-Date) the input used is $username $targetpassword $targetaddress"
  
 
 ##########################################################
@@ -73,7 +76,7 @@ $targetpassword = "P@ssW0rD!"
   $newAccount.platformID = "AzureWindowsServerAccounts"
   # We could use the IP or DNS address, IP is neater...
   #$newAccount.address = $FullyQualifiedDomainName
-  $newAccount.address = "$myPublicIpAddress"
+  $newAccount.address = "$targetaddress"
   # The default Windows account is always Administrator...
   $newAccount.username = $username
   $newAccount.password = $targetpassword
